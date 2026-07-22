@@ -1,0 +1,34 @@
+﻿@model StudentViewModel
+@{
+    Layout = "_layout";
+}
+
+<form asp-action="create" asp-controller="Student" method="post" enctype="multipart/form-data" class="container mt-5">
+    <div class="form-group mt-3">
+        <label asp-for="StdProfile" class="form-label">Upload Image:</label>
+        <input type="file" asp-for="StdProfile" class="form-control">
+        <span asp-validation-for="StdProfile" class="text-danger"></span>
+    </div>
+    <div class="form-group mt-3">
+        <label asp-for="StdName" class="form-label">Name:</label>
+        <input type="text" asp-for="StdName" placeholder="Enter your name" class="form-control">
+        <span asp-validation-for="StdName" class="text-danger"></span>
+
+    </div>
+    <div class="form-group mt-3">
+        <label asp-for="StdAge" class="form-label">Age:</label>
+        <input type="number" asp-for="StdAge" class="form-control" placeholder="Enter your Age">
+        <span asp-validation-for="StdAge" class="text-danger"></span>
+
+    </div>
+    <div class="form-group mt-3">
+        <label asp-for="StdEmail" class="form-label">Email:</label>
+        <input type="email" asp-for="StdEmail" class="form-control" placeholder="Enter your email">
+        <span asp-validation-for="StdEmail" class="text-danger"></span>
+
+    </div>
+
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-primary" value="Submit">Add Student</button>
+    </div>
+</form>
